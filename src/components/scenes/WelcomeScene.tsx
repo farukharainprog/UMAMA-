@@ -4,6 +4,8 @@ import { Sparkles, Heart, ArrowRight } from 'lucide-react';
 import { BIRTHDAY_GIRL, CREATOR_NAME, BIRTHDAY_DATE } from '../../types';
 import { audioEngine } from '../../utils/audio';
 
+import giftBoxImg from '../../assets/images/luxury_pink_gift_box_1794033672226.jpg';
+
 interface WelcomeSceneProps {
   onLetsCelebrate: () => void;
 }
@@ -121,8 +123,15 @@ export const WelcomeScene: React.FC<WelcomeSceneProps> = ({ onLetsCelebrate }) =
           {/* 3D Luxury Box Frame */}
           <div className="relative h-64 w-64 sm:h-80 sm:w-80 overflow-hidden rounded-3xl border-2 border-amber-300/50 bg-slate-950 shadow-[0_20px_50px_rgba(0,0,0,0.8)]">
             <img
-              src="/src/assets/images/luxury_pink_gift_box_1794033672226.jpg"
+              src={giftBoxImg || '/assets/images/luxury_pink_gift_box.jpg'}
               alt="Luxury Pink Birthday Gift Box"
+              onError={(e) => {
+                const target = e.currentTarget;
+                if (!target.dataset.fallbackApplied) {
+                  target.dataset.fallbackApplied = 'true';
+                  target.src = '/assets/images/luxury_pink_gift_box.jpg';
+                }
+              }}
               className={`h-full w-full object-cover transition-all duration-700 ${
                 hasStarted
                   ? 'brightness-90 filter contrast-105 scale-105'

@@ -25,13 +25,13 @@ interface MemoriesSceneProps {
 
 const STORAGE_KEY = 'umama_birthday_photos_v2';
 
-// Elegant initial tribute frames celebrating Umama and Malika's friendship
+// Elegant initial tribute frames celebrating Umama and Malaika's friendship
 const INITIAL_MEMORIES: MemoryPhoto[] = [
   {
     id: 'default-1',
     title: 'A Bond of Sincere Friendship',
     description: `From heartfelt conversations to shared laughter, celebrating every milestone of your life. Happy Birthday ${BIRTHDAY_GIRL}!`,
-    imageUrl: 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600"><defs><radialGradient id="bg" cx="50%" cy="50%" r="65%"><stop offset="0%" stop-color="%23831843"/><stop offset="60%" stop-color="%234c0519"/><stop offset="100%" stop-color="%23020617"/></radialGradient></defs><rect width="800" height="600" fill="url(%23bg)"/><rect x="30" y="30" width="740" height="540" fill="none" stroke="%23f59e0b" stroke-width="2" opacity="0.6"/><rect x="40" y="40" width="720" height="520" fill="none" stroke="%23fb7185" stroke-width="1" opacity="0.4"/><circle cx="400" cy="270" r="120" fill="%23fda4af" opacity="0.15"/><path d="M400,320 C360,260 290,260 290,310 C290,360 400,430 400,430 C400,430 510,360 510,310 C510,260 440,260 400,320 Z" fill="%23f43f5e" opacity="0.9"/><text x="400" y="480" font-family="Georgia" font-size="28" fill="%23fef08a" text-anchor="middle" font-weight="bold">Cherished Friendship</text><text x="400" y="520" font-family="sans-serif" font-size="16" fill="%23ffffff" text-anchor="middle" letter-spacing="2">UMAMA &amp; MALIKA MUNEER</text></svg>',
+    imageUrl: 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600"><defs><radialGradient id="bg" cx="50%" cy="50%" r="65%"><stop offset="0%" stop-color="%23831843"/><stop offset="60%" stop-color="%234c0519"/><stop offset="100%" stop-color="%23020617"/></radialGradient></defs><rect width="800" height="600" fill="url(%23bg)"/><rect x="30" y="30" width="740" height="540" fill="none" stroke="%23f59e0b" stroke-width="2" opacity="0.6"/><rect x="40" y="40" width="720" height="520" fill="none" stroke="%23fb7185" stroke-width="1" opacity="0.4"/><circle cx="400" cy="270" r="120" fill="%23fda4af" opacity="0.15"/><path d="M400,320 C360,260 290,260 290,310 C290,360 400,430 400,430 C400,430 510,360 510,310 C510,260 440,260 400,320 Z" fill="%23f43f5e" opacity="0.9"/><text x="400" y="480" font-family="Georgia" font-size="28" fill="%23fef08a" text-anchor="middle" font-weight="bold">Cherished Friendship</text><text x="400" y="520" font-family="sans-serif" font-size="16" fill="%23ffffff" text-anchor="middle" letter-spacing="2">UMAMA &amp; MALAIKA MUNEER</text></svg>',
     date: '8 November',
     isCustom: false,
   },
@@ -47,7 +47,7 @@ const INITIAL_MEMORIES: MemoryPhoto[] = [
     id: 'default-3',
     title: 'A Golden Journey Together',
     description: 'Praying for endless happiness in your home, marriage, and wonderful life ahead.',
-    imageUrl: 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600"><defs><radialGradient id="bg3" cx="50%" cy="50%" r="65%"><stop offset="0%" stop-color="%23701a75"/><stop offset="60%" stop-color="%234c0519"/><stop offset="100%" stop-color="%23020617"/></radialGradient></defs><rect width="800" height="600" fill="url(%23bg3)"/><rect x="30" y="30" width="740" height="540" fill="none" stroke="%23fb7185" stroke-width="2" opacity="0.6"/><circle cx="340" cy="280" r="90" fill="%23fb7185" opacity="0.4"/><circle cx="460" cy="280" r="90" fill="%23fbbf24" opacity="0.4"/><text x="400" y="480" font-family="Georgia" font-size="28" fill="%23ffffff" text-anchor="middle" font-weight="bold">Beautiful Memories</text><text x="400" y="520" font-family="sans-serif" font-size="16" fill="%23fbcfe8" text-anchor="middle" letter-spacing="2">WITH LOVE, MALIKA MUNEER</text></svg>',
+    imageUrl: 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600"><defs><radialGradient id="bg3" cx="50%" cy="50%" r="65%"><stop offset="0%" stop-color="%23701a75"/><stop offset="60%" stop-color="%234c0519"/><stop offset="100%" stop-color="%23020617"/></radialGradient></defs><rect width="800" height="600" fill="url(%23bg3)"/><rect x="30" y="30" width="740" height="540" fill="none" stroke="%23fb7185" stroke-width="2" opacity="0.6"/><circle cx="340" cy="280" r="90" fill="%23fb7185" opacity="0.4"/><circle cx="460" cy="280" r="90" fill="%23fbbf24" opacity="0.4"/><text x="400" y="480" font-family="Georgia" font-size="28" fill="%23ffffff" text-anchor="middle" font-weight="bold">Beautiful Memories</text><text x="400" y="520" font-family="sans-serif" font-size="16" fill="%23fbcfe8" text-anchor="middle" letter-spacing="2">WITH LOVE, MALAIKA MUNEER</text></svg>',
     date: '8 November',
     isCustom: false,
   },
@@ -349,7 +349,7 @@ export const MemoriesScene: React.FC<MemoriesSceneProps> = ({
         </div>
       )}
 
-      {/* Upload Modal for Malika Muneer */}
+      {/* Upload Modal for MALAIKA MUNEER */}
       {showUploadModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md animate-in fade-in">
           <div className="relative w-full max-w-md rounded-3xl border border-pink-500/40 bg-slate-900 p-6 shadow-2xl text-left">

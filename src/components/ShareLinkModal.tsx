@@ -18,7 +18,7 @@ export const ShareLinkModal: React.FC<ShareLinkModalProps> = ({ isOpen, onClose 
   const customShareUrl = `${baseUrl}/?to=UMAMA-HAPPY-BIRTHDAY`;
 
   const whatsappMessage = encodeURIComponent(
-    `🎂 A Special Birthday Surprise for you, UMAMA! ❤️\n\nClick to open your luxury birthday surprise created with love by Malika Muneer:\n${customShareUrl}`
+    `🎂 A Special Birthday Surprise for you, UMAMA! ❤️\n\nClick to open your luxury birthday surprise created with love by MALAIKA MUNEER:\n${customShareUrl}`
   );
 
   const handleCopy = async () => {

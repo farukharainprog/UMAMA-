@@ -65,7 +65,7 @@ export async function downloadElementAsPng(
 }
 
 /**
- * Generates an elegant, printable PDF of the 15 Birthday Wishes for UMAMA from Malika Muneer
+ * Generates an elegant, printable PDF of the 15 Birthday Wishes for UMAMA from MALAIKA MUNEER
  */
 export async function downloadWishesAsPdf(): Promise<DownloadResult> {
   try {
@@ -137,7 +137,7 @@ export async function downloadWishesAsPdf(): Promise<DownloadResult> {
       currentY += 13.5;
     });
 
-    // Footer with Malika's signature
+    // Footer with MALAIKA MUNEER's signature
     doc.setDrawColor(245, 158, 11);
     doc.setLineWidth(0.3);
     doc.line(30, pageHeight - 25, pageWidth - 30, pageHeight - 25);
@@ -152,7 +152,7 @@ export async function downloadWishesAsPdf(): Promise<DownloadResult> {
     doc.setFontSize(8);
     doc.text(`Happy Birthday Dear ${BIRTHDAY_GIRL} • 8 November`, pageWidth / 2, pageHeight - 12, { align: 'center' });
 
-    const filename = `Umama_15_Birthday_Wishes_from_Malika.pdf`;
+    const filename = `Umama_15_Birthday_Wishes_from_MALAIKA_MUNEER.pdf`;
     doc.save(filename);
 
     return {

@@ -23,7 +23,7 @@ export interface MemoryPhoto {
 }
 
 export const BIRTHDAY_GIRL = "UMAMA";
-export const CREATOR_NAME = "Malika Muneer";
+export const CREATOR_NAME = "MALAIKA MUNEER";
 export const BIRTHDAY_DATE = "8 November";
 
 export const FIFTEEN_WISHES: Wish[] = [

@@ -3,6 +3,8 @@ import confetti from 'canvas-confetti';
 import { Sparkles, Heart, Flame, ArrowRight, RotateCcw } from 'lucide-react';
 import { BIRTHDAY_GIRL, CREATOR_NAME } from '../../types';
 import { audioEngine } from '../../utils/audio';
+import cakeImg from '../../assets/images/luxury_3tier_cake_1794033671278.jpg';
+import sliceImg from '../../assets/images/luxury_cake_slice_1794033671889.jpg';
 
 interface CakeSceneProps {
   onProceedToFinale: () => void;
@@ -163,8 +165,15 @@ export const CakeScene: React.FC<CakeSceneProps> = ({ onProceedToFinale }) => {
           <div className="relative aspect-square w-full max-h-[500px] overflow-hidden rounded-2xl">
             {/* The Ultra-Realistic Three-Tier Cake Image */}
             <img
-              src="/src/assets/images/luxury_3tier_cake_1794033671278.jpg"
+              src={cakeImg || '/assets/images/luxury_3tier_cake.jpg'}
               alt="Grand Luxury Three-Tier Birthday Cake"
+              onError={(e) => {
+                const target = e.currentTarget;
+                if (!target.dataset.fallbackApplied) {
+                  target.dataset.fallbackApplied = 'true';
+                  target.src = '/assets/images/luxury_3tier_cake.jpg';
+                }
+              }}
               className="h-full w-full object-cover object-center"
             />
 
@@ -200,8 +209,15 @@ export const CakeScene: React.FC<CakeSceneProps> = ({ onProceedToFinale }) => {
                   <div className="relative aspect-square w-full overflow-hidden rounded-xl bg-slate-950">
                     {/* Gourmet Layered Cake Slice Asset */}
                     <img
-                      src="/src/assets/images/luxury_cake_slice_1794033671889.jpg"
+                      src={sliceImg || '/assets/images/luxury_cake_slice.jpg'}
                       alt="Gourmet Sliced Cake Piece"
+                      onError={(e) => {
+                        const target = e.currentTarget;
+                        if (!target.dataset.fallbackApplied) {
+                          target.dataset.fallbackApplied = 'true';
+                          target.src = '/assets/images/luxury_cake_slice.jpg';
+                        }
+                      }}
                       className="h-full w-full object-cover"
                     />
                     <div className="absolute bottom-2 inset-x-2 rounded-lg bg-slate-950/80 px-3 py-1 text-[11px] font-bold text-amber-300 backdrop-blur-md">

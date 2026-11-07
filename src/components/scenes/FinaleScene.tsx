@@ -12,6 +12,7 @@ import {
 import { BIRTHDAY_GIRL, CREATOR_NAME, BIRTHDAY_DATE } from '../../types';
 import { downloadElementAsPng } from '../../utils/download';
 import { audioEngine } from '../../utils/audio';
+import cakeImg from '../../assets/images/luxury_3tier_cake_1794033671278.jpg';
 
 interface FinaleSceneProps {
   onReplay: () => void;
@@ -144,8 +145,15 @@ export const FinaleScene: React.FC<FinaleSceneProps> = ({
           <div className="my-6 flex items-center justify-center">
             <div className="relative h-44 w-44 sm:h-52 sm:w-52 overflow-hidden rounded-2xl border-2 border-amber-300/60 shadow-[0_15px_30px_rgba(0,0,0,0.8)]">
               <img
-                src="/src/assets/images/luxury_3tier_cake_1794033671278.jpg"
+                src={cakeImg || '/assets/images/luxury_3tier_cake.jpg'}
                 alt="Luxury Birthday Cake"
+                onError={(e) => {
+                  const target = e.currentTarget;
+                  if (!target.dataset.fallbackApplied) {
+                    target.dataset.fallbackApplied = 'true';
+                    target.src = '/assets/images/luxury_3tier_cake.jpg';
+                  }
+                }}
                 className="h-full w-full object-cover"
               />
               <div className="absolute bottom-1 inset-x-1 rounded bg-slate-950/80 text-[10px] font-bold text-amber-300 py-0.5">
